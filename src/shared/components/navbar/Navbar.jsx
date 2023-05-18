@@ -23,8 +23,8 @@ const Navbar = () => {
                 <h2 className='w-320 text-5xl font-bold'>Kiddos</h2>
                 <div className="col-span-5 px-3 bg-white rounded-full">
                     <div className="flex relative justify-between items-center">
-                        <ul className="menu menu-horizontal px-1">
-                            <li tabIndex={0} className='bg-[#B7D4C5] relative rounded-full my-3'>
+                        <ul className="menu menu-horizontal items-center gap-6 px-1">
+                            <li tabIndex={0} className='bg-[#B7D4C5] rounded-full my-3'>
                                 <a>
                                     All Toys
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
@@ -34,7 +34,9 @@ const Navbar = () => {
                                     <li><a>Submenu 2</a></li>
                                 </ul>
                             </li>
-                            <li><a>Item 3</a></li>
+                            <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>My Toys</li>
+                            <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Add Toys</li>
+                            <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Blogs</li>
                         </ul>
                         <div>
                             <button className="btn btn-ghost btn-circle">
