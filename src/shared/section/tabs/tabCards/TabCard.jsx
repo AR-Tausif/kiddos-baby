@@ -1,5 +1,14 @@
 
 const TabCard = () => {
+
+    // // subcategorys of cars:
+    // 1. McQueen
+    // 2. Mini Police
+    // 3. Super Car
+    // // subcategorys of trucs:
+    // 1. Semi Truck
+    // 2. cement-mixer
+    // 3. truck
     return (
         <div>
             <div className="p-4">

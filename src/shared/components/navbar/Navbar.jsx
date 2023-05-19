@@ -1,5 +1,6 @@
 import { BsRocketTakeoffFill, BsTelephone } from 'react-icons/bs'
 import { BiUser } from 'react-icons/bi'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -25,17 +26,22 @@ const Navbar = () => {
                     <div className="flex relative justify-between items-center">
                         <ul className="menu menu-horizontal items-center gap-6 px-1">
                             <li tabIndex={0} className='bg-[#B7D4C5] rounded-full my-3'>
-                                <a>
+                                <Link to="/all-toys">
                                     All Toys
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                                </a>
+                                </Link>
                                 <ul className="p-2 bg-base-100 absolute mr-96">
                                     <li><a>Submenu 1</a></li>
                                     <li><a>Submenu 2</a></li>
                                 </ul>
                             </li>
+                            <Link to="/">
+                                <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Home</li>
+                            </Link>
                             <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>My Toys</li>
-                            <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Add Toys</li>
+                            <Link to="/add-toy">
+                                <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Add Toys</li>
+                            </Link>
                             <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Blogs</li>
                         </ul>
                         <div>

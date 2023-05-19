@@ -1,6 +1,5 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import Card from '../../components/cards/card/Card';
 import TabCard from './tabCards/TabCard';
 
 const ReactTab = () => {
