@@ -7,10 +7,13 @@ import Register from "../shared/pages/register/Register"
 import Login from "../shared/pages/login/Login";
 import Profile from "../shared/pages/profile/Profile";
 import MyToys from "../shared/pages/myToys/MyToys";
+import ErrorPage from "../shared/pages/errorPage/ErrorPage";
+import Toy from "../shared/components/toy/Toy";
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: "/",
@@ -19,6 +22,10 @@ const router = createBrowserRouter([
             {
                 path: "all-toys",
                 element: <AllToys />
+            },
+            {
+                path: "toy/:id",
+                element: <Toy />
             },
             {
                 path: "add-toy",

@@ -6,6 +6,7 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(null)
+    const [toys, setToys] = useState([])
     const googleProvider = new GoogleAuthProvider();
 
     const registerWithGooglePopUp = () => {
@@ -32,7 +33,11 @@ const AuthProvider = ({ children }) => {
         return () => unSubscribe()
     }, [])
 
-
+    useEffect(() => {
+        fetch("http://localhost:3500/products")
+            .then(res => res.json())
+            .then(data => setToys(data))
+    }, [])
 
     // context Providing here
     const provideContext = {
@@ -43,6 +48,7 @@ const AuthProvider = ({ children }) => {
         userSignOut,
         user,
         loading,
+        toys,
     }
 
     return (
