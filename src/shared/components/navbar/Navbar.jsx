@@ -53,7 +53,9 @@ const Navbar = () => {
                             <Link to="/">
                                 <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Home</li>
                             </Link>
-                            <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>My Toys</li>
+                            <Link to="/my-toys">
+                                <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>My Toys</li>
+                            </Link>
                             <Link to="/add-toy">
                                 <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Add Toys</li>
                             </Link>

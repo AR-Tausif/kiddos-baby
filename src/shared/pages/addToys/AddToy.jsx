@@ -3,31 +3,43 @@ import { AuthContext } from "../../../provider/Provider";
 
 
 const AddToy = () => {
+    const { user } = useContext(AuthContext)
 
     const handleAddToyItem = event => {
         event.preventDefault();
         const form = event.target;
-        const sellerName = form.seller_name.value;
-        const titleName = form.name.value;
-        const email = form.email.value;
-        const subCategory = form.sub_category.value;
+        const seller_name = form.seller_name.value;
+        const name = form.name.value;
+        const seller_email = form.email.value;
+        const category = form.category.value;
+        const sub_category = form.sub_category.value;
         const price = form.price.value;
-        const description = form.description.value;
-        const imgUrl = form.image_url.value;
+        const detail_description = form.description.value;
+        const picture_url = form.image_url.value;
         const rating = form.rating.value;
-        const quantity = form.quantity.value;
+        const available_quantity = form.quantity.value;
         const data = {
-            sellerName,
-            titleName,
-            email,
-            subCategory,
+            seller_name,
+            name,
+            seller_email,
+            sub_category,
+            category,
             price,
-            description,
-            imgUrl,
+            detail_description,
+            picture_url,
             rating,
-            quantity,
+            available_quantity,
         }
-        console.log(data);
+
+        fetch("http://localhost:3500/products", {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
     }
     return (
         <section className="text-gray-600 body-font relative">
@@ -41,19 +53,25 @@ const AddToy = () => {
                         <div className="p-2 w-1/2">
                             <div className="relative">
                                 <label htmlFor="seller_name" className="leading-7 text-sm text-gray-600">Seller Name</label>
-                                <input type="text" id="name" name="seller_name" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                <input type="text" defaultValue={user?.displayName} id="name" name="seller_name" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                             </div>
                         </div>
                         <div className="p-2 w-1/2">
                             <div className="relative">
                                 <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
-                                <input type="email" id="email" name="email" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                <input defaultValue={user.email} type="email" id="email" name="email" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                             </div>
                         </div>
                         <div className="p-2 w-1/2">
                             <div className="relative">
                                 <label htmlFor="name" className="leading-7 text-sm text-gray-600">Toy Name</label>
                                 <input type="text" id="toy-name" name="toy-name" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            </div>
+                        </div>
+                        <div className="p-2 w-1/2">
+                            <div className="relative">
+                                <label htmlFor="category" className="leading-7 text-sm text-gray-600">Category</label>
+                                <input type="text" id="category" name="category" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                             </div>
                         </div>
                         <div className="p-2 w-1/2">

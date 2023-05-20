@@ -6,6 +6,7 @@ import AddToy from "../shared/pages/addToys/AddToy";
 import Register from "../shared/pages/register/Register"
 import Login from "../shared/pages/login/Login";
 import Profile from "../shared/pages/profile/Profile";
+import MyToys from "../shared/pages/myToys/MyToys";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: "add-toy",
                 element: <AddToy />
+            },
+            {
+                path: "my-toys",
+                element: <MyToys />
             },
             {
                 path: "register",
