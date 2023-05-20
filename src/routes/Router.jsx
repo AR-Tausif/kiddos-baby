@@ -9,6 +9,7 @@ import Profile from "../shared/pages/profile/Profile";
 import MyToys from "../shared/pages/myToys/MyToys";
 import ErrorPage from "../shared/pages/errorPage/ErrorPage";
 import Toy from "../shared/components/toy/Toy";
+import PrivateRoute from "./privateRoute/PrivateRoute";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -25,15 +26,15 @@ const router = createBrowserRouter([
             },
             {
                 path: "toy/:id",
-                element: <Toy />
+                element: <PrivateRoute><Toy /></PrivateRoute>
             },
             {
                 path: "add-toy",
-                element: <AddToy />
+                element: <PrivateRoute><AddToy /></PrivateRoute>
             },
             {
                 path: "my-toys",
-                element: <MyToys />
+                element: <PrivateRoute><MyToys /></PrivateRoute>
             },
             {
                 path: "register",
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "profile",
-                element: <Profile />
+                element: <PrivateRoute><Profile /></PrivateRoute>
             },
         ]
     },
