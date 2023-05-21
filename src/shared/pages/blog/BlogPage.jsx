@@ -48,8 +48,11 @@ const BlogPage = () => {
                                 <span className="text-lg font-semibold text-white">?</span>
                             </div>
                             <div className="ml-4">
-                                <p className="text-xl font-semibold text-white">How do you provide support?</p>
-                                <p className="mt-4 text-base text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                                <p className="text-xl font-semibold text-white">What is MongoDB aggregate and how does it work?</p>
+                                <p className="mt-4 text-base text-gray-400">
+                                    MongoDB aggregate is a feature that allows you to perform complex operations on your data. It uses a pipeline of stages to process your data, and each stage can perform a different operation. For example, you can use the $match stage to filter your data, the $group stage to group your data, and the $project stage to project your data.
+
+                                    To use MongoDB aggregate, you need to use the db.collection.aggregate() method. This method takes an array of stages as its argument. The stages are executed in order, and the output of each stage is passed to the next stage.</p>
                             </div>
                         </div>
                     </div>
