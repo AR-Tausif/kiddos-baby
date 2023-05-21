@@ -4,9 +4,9 @@ import { AuthContext } from "../../../provider/Provider";
 
 
 const MyToys = () => {
+    document.title = "Kiddos - My Toys"
     const [toys, setToys] = useState([]);
     const { user } = useContext(AuthContext)
-    document.title = "Kiddos - My Toys"
     const url = `https://kiddos-server.vercel.app/products/email?email=${user.email}`
     useEffect(() => {
         fetch(url, {
@@ -16,19 +16,22 @@ const MyToys = () => {
             .then(data => setToys(data))
     }, [url])
     const handleDeleteData = (id) => {
-        const deleteUrl = `http://localhost:3500/products/email?email=tausif.ritu1@gmail.com&id=${id}`
+        const deleteUrl = `http://localhost:3500/products/email?${user.email}&id=${id}`
+        const sureDelete = confirm("Are you wanna delete?")
+        if (sureDelete) {
 
-        fetch(deleteUrl, {
-            method: "DELETE",
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-
-                const deleteToyFilter = toys.filter(toy => toy._id !== id)
-                setToys(deleteToyFilter);
-
+            fetch(deleteUrl, {
+                method: "DELETE",
             })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+
+                    const deleteToyFilter = toys.filter(toy => toy._id !== id)
+                    setToys(deleteToyFilter);
+
+                })
+        }
     }
     return (
         <div className="bg-base-100">
