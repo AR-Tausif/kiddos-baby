@@ -31,7 +31,7 @@ const AddToy = () => {
             available_quantity,
         }
 
-        fetch("http://localhost:3500/products", {
+        fetch("https://kiddos-server.vercel.app/products", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

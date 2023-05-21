@@ -6,7 +6,7 @@ import { AuthContext } from "../../../provider/Provider";
 const MyToys = () => {
     const [toys, setToys] = useState([]);
     const { user } = useContext(AuthContext)
-    const url = `http://localhost:3500/products/email?email=${user.email}`
+    const url = `https://kiddos-server.vercel.app/products/email?email=${user.email}`
     useEffect(() => {
         fetch(url, {
             method: "GET"

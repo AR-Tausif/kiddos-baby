@@ -39,7 +39,7 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
 
-        fetch("http://localhost:3500/products")
+        fetch("https://kiddos-server.vercel.app/products")
             .then(res => res.json())
             .then(data => {
                 setToys(data)
