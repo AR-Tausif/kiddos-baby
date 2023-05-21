@@ -16,8 +16,8 @@ const BlogPage = () => {
                                 <span className="text-lg font-semibold text-white">?</span>
                             </div>
                             <div className="ml-4">
-                                <p className="text-xl font-semibold text-white">How to create an account?</p>
-                                <p className="mt-4 text-base text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                                <p className="text-xl font-semibold text-white">What is an access token and refresh token? How do they work and where should we store them on the client-side?</p>
+                                <p className="mt-4 text-base text-gray-400">Access tokens are typically used to access resources that are only needed for a short period of time, such as a user's email address or a list of contacts. Refresh tokens are typically used to access resources that are needed for a longer period of time, such as a user's calendar or a list of files.</p>
                             </div>
                         </div>
 
@@ -26,8 +26,8 @@ const BlogPage = () => {
                                 <span className="text-lg font-semibold text-white">?</span>
                             </div>
                             <div className="ml-4">
-                                <p className="text-xl font-semibold text-white">How can I make payment?</p>
-                                <p className="mt-4 text-base text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                                <p className="text-xl font-semibold text-white">Compare SQL and NoSQL databases?</p>
+                                <p className="mt-4 text-base text-gray-400">SQL and NoSQL databases are two different types of databases. SQL databases are relational databases, while NoSQL databases are non-relational databases.</p>
                             </div>
                         </div>
 
@@ -36,8 +36,10 @@ const BlogPage = () => {
                                 <span className="text-lg font-semibold text-white">?</span>
                             </div>
                             <div className="ml-4">
-                                <p className="text-xl font-semibold text-white">Do you provide discounts?</p>
-                                <p className="mt-4 text-base text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                                <p className="text-xl font-semibold text-white">What is express js? What is Nest JS (google it)?</p>
+                                <p className="mt-4 text-base text-gray-400">Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web applications. It is designed to be easy to use and extend, and it is used by a large number of developers worldwide.
+
+                                    Nest.js is a framework built on top of Express.js that provides a more opinionated and structured approach to building web applications. It uses TypeScript, which is a superset of JavaScript that provides a number of benefits, such as type safety and improved tooling. Nest.js also provides a number of features that make it easier to build scalable and maintainable web applications, such as dependency injection, routing, and modules.</p>
                             </div>
                         </div>
 
