@@ -16,7 +16,7 @@ const ReactTab = () => {
     // }, [])
 
     const carCatToy = toys.filter(toy => toy.category === "Car")
-    const truckCatToy = toys.filter(toy => toy.category === "Truck")
+    const truckCatToy = toys.filter(toy => toy.category == "Truck")
 
     useEffect(() => {
         setCarToys(carCatToy.slice(0, 3))
@@ -24,9 +24,14 @@ const ReactTab = () => {
     }, [])
 
     const handleCarCategoryProduct = () => {
-        console.log(carCatToy);
+
         setCarToys(carCatToy.slice(0, 3));
     }
+    const handleTruckCategoryProduct = () => {
+
+        setTrucks(carTruckToy.slice(0, 3));
+    }
+
 
     const handleLoadMore = () => {
         setCarToys(carCatToy)
@@ -36,12 +41,12 @@ const ReactTab = () => {
         <div className="container mx-auto">
             <Tabs>
                 <TabList>
-                    <Tab onClick={handleCarCategoryProduct}>Car</Tab>
-                    <Tab>Title 2</Tab>
+                    <Tab id='tab' onClick={handleCarCategoryProduct}>Car</Tab>
+                    <Tab onClick={handleTruckCategoryProduct}>Trucks</Tab>
                 </TabList>
 
                 <TabPanel>
-                    <div className="grid grid-cols-3 gap-7">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                         {
                             carToys.map((toy) => <TabCard key={toy._id} toy={toy} />)
                         }
@@ -51,7 +56,7 @@ const ReactTab = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className="grid grid-cols-3 gap-7">
+                    <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-7">
                         {
                             trucks.map((toy) => <TabCard key={toy._id} toy={toy} />)
                         }

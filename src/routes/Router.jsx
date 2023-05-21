@@ -10,6 +10,7 @@ import MyToys from "../shared/pages/myToys/MyToys";
 import ErrorPage from "../shared/pages/errorPage/ErrorPage";
 import Toy from "../shared/components/toy/Toy";
 import PrivateRoute from "./privateRoute/PrivateRoute";
+import UpdateToy from "../shared/pages/myToys/updateToy/UpdateToy"
 const router = createBrowserRouter([
     {
         path: "/",

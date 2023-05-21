@@ -34,7 +34,7 @@ const Table = ({ toys, self }) => {
                 </thead>
                 <tbody>
                     {
-                        toys.map((toy, index) => <TableRow self key={index} toy={toy} />)
+                        toys.map((toy, index) => <TableRow self={self} key={index} toy={toy} />)
                     }
                 </tbody>
             </table>

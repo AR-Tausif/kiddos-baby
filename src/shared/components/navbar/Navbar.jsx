@@ -15,18 +15,18 @@ const Navbar = () => {
     return (
         <>
             <div className="container mx-auto flex justify-between py-5">
-                <div className="flex gap-10 items-center">
+                <div className="flex gap-2 lg:gap-10 items-center">
                     <BsRocketTakeoffFill />
                     <p>7 days a week
                         from 9:00 am to 7:00 pm</p>
                 </div>
-                <div className="flex gap-4 items-center">
-                    <p className='inline-flex items-center gap-2'>
+                <div className="flex gap-2 lg:gap-4 items-center">
+                    <p className='inline-flex items-center gap-1'>
                         <BsTelephone />
                         Contact
                     </p>
                     {
-                        user ? <button onClick={handleUserSignOut} className='inline-flex items-center gap-2'> <VscSignOut /> Log Out</button>
+                        user ? <button onClick={handleUserSignOut} className='inline-flex items-center gap-1'> <VscSignOut /> Log Out</button>
                             :
                             <Link to="/login">
                                 <button className='inline-flex items-center gap-2'> <VscSignIn /> Log in</button>
@@ -35,10 +35,13 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className='container mx-auto grid grid-cols-6 items-center'>
+            <div className='container mx-auto flex lg:grid lg:grid-cols-6 justify-between items-center'>
                 <h2 className='w-320 text-5xl font-bold'>Kiddos</h2>
-                <div className="col-span-5 px-3 bg-white rounded-full">
-                    <div className="flex relative justify-between items-center">
+
+
+                <div className="col-span-5  ">
+
+                    <div className=" bg-white px-3 rounded-full hidden lg:flex xl:flex relative justify-between items-center">
                         <ul className="menu menu-horizontal items-center gap-6 px-1">
                             <li tabIndex={0} className='bg-[#B7D4C5] rounded-full my-3'>
                                 <Link to="/all-toys">
@@ -99,6 +102,7 @@ const Navbar = () => {
                             }
                         </div>
                     </div>
+
                 </div>
             </div>
         </>

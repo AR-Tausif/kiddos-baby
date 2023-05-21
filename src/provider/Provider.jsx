@@ -38,9 +38,13 @@ const AuthProvider = ({ children }) => {
     }, [])
 
     useEffect(() => {
+
         fetch("http://localhost:3500/products")
             .then(res => res.json())
-            .then(data => setToys(data))
+            .then(data => {
+                setToys(data)
+                setLoading(false)
+            })
     }, [])
 
     // context Providing here
