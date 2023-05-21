@@ -17,7 +17,7 @@ const MyToys = () => {
     return (
         <div className=" bg-warning">
             <div className="container mx-auto mt-11">
-                <Table toys={toys} />
+                <Table self="My Toys" toys={toys} />
             </div>
         </div>
 

@@ -10,6 +10,7 @@ const AuthProvider = ({ children }) => {
     const googleProvider = new GoogleAuthProvider();
 
     const registerWithGooglePopUp = () => {
+        setLoading(true)
         return signInWithPopup(auth, googleProvider);
     }
     const registerUserWithEmail = (email, password) => {
@@ -17,12 +18,15 @@ const AuthProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
     const loginUserWithEmail = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
     const updateUserAccountInfo = (name, image) => {
+        setLoading(true)
         return updateProfile(auth.currentUser, { name, image })
     }
     const userSignOut = () => {
+        setLoading(true)
         return signOut(auth)
     }
     useEffect(() => {

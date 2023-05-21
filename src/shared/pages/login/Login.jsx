@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../provider/Provider';
 
 const Login = () => {
     const { loginUserWithEmail } = useContext(AuthContext)
+    const navigate = useNavigate();
+    const location = useLocation()
+    const from = location?.state?.from?.pathname || "/"
     const handleLoginInputField = event => {
         event.preventDefault()
         const form = event.target;
@@ -12,9 +15,9 @@ const Login = () => {
         loginUserWithEmail(email, password)
             .then(result => {
                 console.log(result.user);
+                navigate(from)
             })
             .catch(err => console.error(err))
-
     }
     return (
         <section className="bg-gray-50 dark:bg-yellow-50  mt-10">

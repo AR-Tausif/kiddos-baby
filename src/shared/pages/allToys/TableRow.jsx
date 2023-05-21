@@ -1,33 +1,34 @@
+import { NavLink } from "react-router-dom";
+import { MdDeleteSweep } from "react-icons/md"
 
-const TableRow = ({ toy }) => {
+const TableRow = ({ toy, self }) => {
     return (
-        <tr className="shadow-xl">
-            <th>
-                <button className="btn btn-circle btn-outline btn-warning btn-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                </button>
+
+        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            {
+                self === "My Toys" &&
+                <td className="px-6 py-4  text-red-400 text-2xl">
+                    <MdDeleteSweep />
+                </td>
+            }
+            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {toy.name}
             </th>
-            <td>
-                <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                        <div className="rounded-lg w-32 h-32">
-                            <img src={toy?.picture_url} alt="Avatar Tailwind CSS Component" />
-                        </div>
-                    </div>
-                    <div>
-                        <div className="font-bold"> {toy.seller_name}</div>
-                        <div className="text-sm opacity-50">Price: $120</div>
-                        <div className="text-sm opacity-50">Available: 10</div>
-                    </div>
-                </div>
+            <td className="px-6 py-4">
+                {toy.seller_name}
             </td>
-            <td>
-                <p className="font-bold">{toy?.name}</p>
+            <td className="px-6 py-4">
+                {toy.sub_category}
             </td>
-            <td>{toy?.sub_category}</td>
-            <th>
-                <button className="btn btn-ghost btn-xs">Details</button>
-            </th>
+            <td className="px-6 py-4">
+                {toy.quantity}
+            </td>
+            <td className="px-6 py-4">
+                ${toy.price}
+            </td>
+            <td className="px-6 py-4 text-right">
+                <NavLink to={`/toy/${toy._id}`} className="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</NavLink>
+            </td>
         </tr>
     );
 };

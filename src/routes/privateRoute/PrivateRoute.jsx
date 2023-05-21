@@ -8,7 +8,7 @@ const PrivateRoute = ({ children }) => {
     if (loading) {
         return spinner;
     }
-    if (user.email) {
+    if (user?.email) {
         return children;
     }
     return <Navigate to="/login" state={{ from: location }} replace />
