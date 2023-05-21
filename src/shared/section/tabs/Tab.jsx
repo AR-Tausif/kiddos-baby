@@ -29,13 +29,13 @@ const ReactTab = () => {
     }
     const handleTruckCategoryProduct = () => {
 
-        setTrucks(carTruckToy.slice(0, 3));
+        setTrucks(trucks.slice(0, 3));
     }
 
 
     const handleLoadMore = () => {
         setCarToys(carCatToy)
-        trucks(truckCatToy)
+        setTrucks(truckCatToy)
     }
     return (
         <div className="container mx-auto">

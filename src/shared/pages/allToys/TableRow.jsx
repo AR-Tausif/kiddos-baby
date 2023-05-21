@@ -12,13 +12,22 @@ const TableRow = ({ toy, self }) => {
         setShowModal(true)
         setPutToy(toy)
     }
+    const handleDeleteData = (id) => {
+        const deleteUrl = `http://localhost:3500/products/email?email=tausif.ritu1@gmail.com&id=${id}`
+
+        fetch(deleteUrl, {
+            method: "DELETE",
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+    }
     return (
 
         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-slate-900">
             {
                 self === "My Toys" &&
                 <td className="px-6 py-4  text-red-400 text-2xl">
-                    <div className="hover:bg-gray-300 w-10 rounded py-1">
+                    <div onClick={() => handleDeleteData(toy._id)} className="hover:bg-gray-300 w-10 rounded py-1">
                         <MdDeleteSweep className="mx-auto" />
                     </div>
                 </td>
