@@ -7,7 +7,7 @@ const Toy = () => {
     const { toys } = useContext(AuthContext)
     const findToy = toys.find(toy => toy._id == params.id)
 
-    console.log();
+
 
     return (
         <section className="text-gray-700 body-font overflow-hidden bg-white">
