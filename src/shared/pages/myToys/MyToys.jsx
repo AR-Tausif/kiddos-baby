@@ -14,10 +14,25 @@ const MyToys = () => {
             .then(res => res.json())
             .then(data => setToys(data))
     }, [url])
+    const handleDeleteData = (id) => {
+        const deleteUrl = `http://localhost:3500/products/email?email=tausif.ritu1@gmail.com&id=${id}`
+
+        fetch(deleteUrl, {
+            method: "DELETE",
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+
+                const deleteToyFilter = toys.filter(toy => toy._id !== id)
+                setToys(deleteToyFilter);
+
+            })
+    }
     return (
         <div className=" bg-warning">
             <div className="container mx-auto mt-11">
-                <Table self="My Toys" toys={toys} />
+                <Table self="My Toys" handleDeleteData={handleDeleteData} toys={toys} />
             </div>
         </div>
 

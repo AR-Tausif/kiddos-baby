@@ -1,6 +1,6 @@
 import TableRow from "./TableRow";
 
-const Table = ({ toys, self }) => {
+const Table = ({ toys, self, handleDeleteData }) => {
     return (
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -34,7 +34,7 @@ const Table = ({ toys, self }) => {
                 </thead>
                 <tbody>
                     {
-                        toys.map((toy, index) => <TableRow self={self} key={index} toy={toy} />)
+                        toys.map((toy, index) => <TableRow self={self} key={index} handleDeleteData={handleDeleteData} toy={toy} />)
                     }
                 </tbody>
             </table>

@@ -4,7 +4,7 @@ import { MdDeleteSweep, MdUpdate } from "react-icons/md"
 import { useState } from "react";
 import UpdateToy from "../myToys/updateToy/UpdateToy"
 
-const TableRow = ({ toy, self }) => {
+const TableRow = ({ toy, self, handleDeleteData }) => {
     const [showModal, setShowModal] = useState(false);
     const [putToy, setPutToy] = useState({});
 
@@ -12,15 +12,7 @@ const TableRow = ({ toy, self }) => {
         setShowModal(true)
         setPutToy(toy)
     }
-    const handleDeleteData = (id) => {
-        const deleteUrl = `http://localhost:3500/products/email?email=tausif.ritu1@gmail.com&id=${id}`
 
-        fetch(deleteUrl, {
-            method: "DELETE",
-        })
-            .then(res => res.json())
-            .then(data => console.log(data))
-    }
     return (
 
         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-slate-900">
