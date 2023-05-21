@@ -3,6 +3,7 @@ import { AuthContext } from "../../../provider/Provider";
 
 
 const AddToy = () => {
+    document.title = "Kiddos- Add Toy"
     const { user } = useContext(AuthContext)
 
     const handleAddToyItem = event => {

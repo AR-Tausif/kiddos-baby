@@ -6,6 +6,7 @@ import { AuthContext } from "../../../provider/Provider";
 const MyToys = () => {
     const [toys, setToys] = useState([]);
     const { user } = useContext(AuthContext)
+    document.title = "Kiddos - My Toys"
     const url = `https://kiddos-server.vercel.app/products/email?email=${user.email}`
     useEffect(() => {
         fetch(url, {
@@ -30,7 +31,7 @@ const MyToys = () => {
             })
     }
     return (
-        <div className=" bg-warning">
+        <div className="bg-base-100">
             <div className="container mx-auto mt-11">
                 <Table self="My Toys" handleDeleteData={handleDeleteData} toys={toys} />
             </div>
