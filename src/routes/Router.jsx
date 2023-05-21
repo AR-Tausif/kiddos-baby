@@ -11,6 +11,7 @@ import ErrorPage from "../shared/pages/errorPage/ErrorPage";
 import Toy from "../shared/components/toy/Toy";
 import PrivateRoute from "./privateRoute/PrivateRoute";
 import UpdateToy from "../shared/pages/myToys/updateToy/UpdateToy"
+import BlogPage from "../shared/pages/blog/BlogPage";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path: "my-toys",
                 element: <PrivateRoute><MyToys /></PrivateRoute>
+            },
+            {
+                path: "/blog",
+                element: <PrivateRoute><BlogPage /></PrivateRoute>
             },
             {
                 path: "register",

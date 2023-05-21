@@ -56,13 +56,19 @@ const Navbar = () => {
                             <Link to="/">
                                 <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Home</li>
                             </Link>
-                            <Link to="/my-toys">
-                                <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>My Toys</li>
+                            {
+                                user && <>
+                                    <Link to="/my-toys">
+                                        <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>My Toys</li>
+                                    </Link>
+                                    <Link to="/add-toy">
+                                        <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Add Toys</li>
+                                    </Link>
+                                </>
+                            }
+                            <Link to="/blog">
+                                <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Blogs</li>
                             </Link>
-                            <Link to="/add-toy">
-                                <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Add Toys</li>
-                            </Link>
-                            <li className='my-3 hover:border-b-4 border-[#B7D4C5]'>Blogs</li>
                         </ul>
                         <div className='flex items-center gap-4'>
                             <button className="btn btn-ghost btn-circle">
