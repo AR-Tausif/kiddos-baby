@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../provider/Provider';
 
 const Login = () => {
+    document.title = "Kiddos. | Login"
     const { loginUserWithEmail } = useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation()

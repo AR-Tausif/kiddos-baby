@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import Table from "../allToys/Table";
 import { AuthContext } from "../../../provider/Provider";
+import CtaBanner from "../../components/banner/CtaBanner";
 
 
 const MyToys = () => {
@@ -26,16 +27,15 @@ const MyToys = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
-
                     const deleteToyFilter = toys.filter(toy => toy._id !== id)
-                    setToys(deleteToyFilter);
-
+                    setToys(deleteToyFilter)
                 })
         }
     }
     return (
         <div className="bg-base-100">
             <div className="container mx-auto mt-11">
+                <CtaBanner title="My Toys" />
                 <Table self="My Toys" handleDeleteData={handleDeleteData} toys={toys} />
             </div>
         </div>

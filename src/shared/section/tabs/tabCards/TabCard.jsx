@@ -15,7 +15,9 @@ const TabCard = ({ toy }) => {
         <div>
             <div className="p-4">
                 <div className="h- border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                    <img className="h-full" src={picture_url} alt="" />
+                    <div className="h-80">
+                        <img className="h-full" src={picture_url} alt="" />
+                    </div>
                     <div className="p-6">
                         {/* <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2> */}
                         <h1 className="title-font text-lg font-medium text-gray-900 mb-3">{name}</h1>

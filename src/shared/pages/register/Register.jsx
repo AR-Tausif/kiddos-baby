@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../provider/Provider";
 const Register = () => {
+    document.title = "Kiddos. | Sign UP"
     const { registerUserWithEmail, registerWithGooglePopUp, updateUserAccountInfo } = useContext(AuthContext)
     const handleSubmitRegister = event => {
         event.preventDefault();

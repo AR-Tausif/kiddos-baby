@@ -1,6 +1,7 @@
 import React from 'react';
 
 const BlogPage = () => {
+    document.title = "Kiddos. | Blog"
     return (
         <div>
             <section className="py-10 bg-gray-900 sm:py-16 lg:py-24">
