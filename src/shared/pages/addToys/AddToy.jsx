@@ -40,7 +40,12 @@ const AddToy = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    alert("You are added a new item")
+                }
+            })
     }
     return (
         <section className="text-gray-600 body-font relative">

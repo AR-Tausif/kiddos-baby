@@ -17,7 +17,7 @@ const MyToys = () => {
             .then(data => setToys(data))
     }, [url])
     const handleDeleteData = (id) => {
-        const deleteUrl = `http://localhost:3500/products/email?${user.email}&id=${id}`
+        const deleteUrl = `https://kiddos-server.vercel.app/products?id=${id}`
         const sureDelete = confirm("Are you wanna delete?")
         if (sureDelete) {
 

@@ -1,9 +1,12 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../provider/Provider";
 const Register = () => {
     document.title = "Kiddos. | Sign UP"
     const { registerUserWithEmail, registerWithGooglePopUp, updateUserAccountInfo } = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
+    const from = location?.state?.from?.pathname || "/"
     const handleSubmitRegister = event => {
         event.preventDefault();
         const form = event.target;
@@ -16,17 +19,17 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from)
             })
             .catch(err => console.error(err))
-
-        // updateUserAccountInfo(name, imageUrl)
-        //     .then(result => console.log(result))
-        //     .catch(err => console.error(err))
     }
 
     const handleGoogleSignUp = () => {
         registerWithGooglePopUp()
-            .then(result => console.log(result.user))
+            .then(result => {
+                console.log(result.user)
+                navigate(from)
+            })
             .catch(err => console.error(err))
     }
     return (
