@@ -5,7 +5,6 @@ import CtaBanner from "../../components/banner/CtaBanner";
 
 
 const MyToys = () => {
-    document.title = "Kiddos - My Toys"
     const [toys, setToys] = useState([]);
     const { user } = useContext(AuthContext)
     const url = `https://kiddos-server.vercel.app/products/email?email=${user.email}`

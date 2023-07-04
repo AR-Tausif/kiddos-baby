@@ -1,19 +1,19 @@
 import "./home.css"
 
 import Header from "./header/Header";
-import Cards from "../../components/cards/Cards";
+// import Cards from "../../components/cards/Cards";
 import Gellary from "../../section/gellary/Gellary";
 import ReactTab from "../../section/tabs/Tab";
 import StartedSection from "./startedSection/StartedSection";
+import CategoryTab from "../../components/tabs/Tabs";
 const Home = () => {
-    document.title = "Kiddos."
+
     return (
         <>
             <Header />
-            <Cards />
             <Gellary />
             <StartedSection />
-            <ReactTab />
+            <CategoryTab />
         </>
     );
 };

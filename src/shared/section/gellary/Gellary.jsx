@@ -30,7 +30,7 @@ const Gellary = () => {
         //     </div>
         // </div>
 
-        <div className="mt-52">
+        <div className="mt-72">
             <div className="mx-auto max-w-3xl text-center py-10">
                 <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
                     Shop By Category
@@ -43,35 +43,35 @@ const Gellary = () => {
                 </p>
             </div>
             <div className="container mx-auto px-5 py-20 lg:px-32 lg:pt-12">
-                <div className="-m-1 flex flex-wrap md:-m-2">
-                    <div className="flex w-1/3 flex-wrap">
+                <div className="-m-1 flex flex-wrap md:-m-2 space-y-4  ">
+                    <div className="flex w-1/3 flex-wrap border">
                         <div className="w-full p-1 md:p-2">
-                            <img alt="gallery" className="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+                            <img alt="gallery" className="block h-full w-full rounded-lg object-cover object-center" src="https://i.ibb.co/PwqCVmx/maxresdefault.jpg" />
                         </div>
                     </div>
-                    <div className="flex w-1/3 flex-wrap">
+                    <div className="flex w-1/3 flex-wrap hover:border">
                         <div className="w-full p-1 md:p-2">
-                            <img alt="gallery" className="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
+                            <img alt="gallery" className="block h-full w-full rounded-lg object-cover object-center" src="https://i.ibb.co/VmbLwF1/image-a-HR0c-HM6-Ly9p-NS53-YWxt-YXJ0a-W1h-Z2-Vz-Lm-Nvb-S9hc3-Iv-NThl-Yz-Qz-Mj-At-NWUz-NS00-Mm-Iz-LTh.jpg" />
                         </div>
                     </div>
-                    <div className="flex w-1/3 flex-wrap">
+                    <div className="flex w-1/3 flex-wrap border">
                         <div className="w-full p-1 md:p-2">
-                            <img alt="gallery" className="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
+                            <img alt="gallery" className="block h-full w-full rounded-lg object-cover object-center" src="https://i.ibb.co/6rzwRjJ/maxresdefault.jpg" />
                         </div>
                     </div>
-                    <div className="flex w-1/3 flex-wrap">
+                    <div className="flex w-1/3 flex-wrap border">
                         <div className="w-full p-1 md:p-2">
-                            <img alt="gallery" className="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
+                            <img alt="gallery" className="block h-full w-full rounded-lg object-cover object-center" src="https://i.ibb.co/mJc5X0c/1d26a118-cd49-4f88-93c8-2b53d6bdd066-31965-1678460129.jpg" />
                         </div>
                     </div>
-                    <div className="flex w-1/3 flex-wrap">
+                    <div className="flex w-1/3 flex-wrap hover:border">
                         <div className="w-full p-1 md:p-2">
-                            <img alt="gallery" className="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp" />
+                            <img alt="gallery" className="block h-full w-full rounded-lg object-cover object-center" src="https://i.ibb.co/m6YTcxF/718tu-Qx-Fth-L.jpg" />
                         </div>
                     </div>
-                    <div className="flex w-1/3 flex-wrap">
+                    <div className="flex w-1/3 flex-wrap border">
                         <div className="w-full p-1 md:p-2">
-                            <img alt="gallery" className="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
+                            <img alt="gallery" className="block h-full w-full rounded-lg object-cover object-center" src="https://i.ibb.co/mDWc9pQ/1-18-Laferrari-Diecast-Model-Cars-Collection-with-High-Quality-Made-in-China.jpg" />
                         </div>
                     </div>
                 </div>

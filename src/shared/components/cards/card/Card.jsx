@@ -1,20 +1,27 @@
 import { TbWorld } from "react-icons/tb";
 import "./card.css"
 import { FaSignInAlt } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../../../provider/Provider";
 
-const Card = () => {
+const Card = ({ cover_image }) => {
+    const { toys } = useContext(AuthContext)
+    // console.log(toys[1]);
     return (
-        <div className="relative bg_setup_card w-1/6 h-full rounded-2xl flex flex-col gap-40">
-            <div className="ps-5 mt-7 z-50">
-                <h3 className="text-white font-bold">
-                    CATEGORIES
-                </h3>
-                <h2 className="text-3xl font-bold">Baby Tshirts</h2>
+        <div className="rounded-xl overflow-hidden shadow-lg bg-gray-300">
+            <img className="w-full" src={cover_image} alt="Mountain" />
+            <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">Mountain</div>
+                <p className="text-gray-700 text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                </p>
             </div>
-            <div className="bg-gradient-to-r from-slate-500 to-gray-800 absolute w-full h-full opacity-20 rounded-2xl -z-0">.</div>
-            <button className="flex mx-auto w-4/5 z-50
-              items-center gap-4 bg-white text-black border-0 py-3 px-5 focus:outline-none hover:bg-indigo-600 rounded-full text-sm mb-7">Get Bestsellers now <FaSignInAlt /> </button>
-        </div >
+            {/* <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+            </div> */}
+        </div>
 
     );
 };
