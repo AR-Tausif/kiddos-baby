@@ -34,11 +34,10 @@ const MyToys = () => {
     return (
         <div className="bg-base-100">
             <div className="container mx-auto mt-11">
-                <CtaBanner title="My Toys" />
+                <CtaBanner title="My Toys" /> 
                 <Table self="My Toys" handleDeleteData={handleDeleteData} toys={toys} />
             </div>
         </div>
-
     );
 };
 
